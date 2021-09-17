@@ -1,6 +1,6 @@
 import React from 'react'
-import StyledView from "../lowLevelComponents/styledView";
-import StyledText from "../lowLevelComponents/styledText";
+import StyledView from "../../lowLevelComponents/styledView";
+import StyledText from "../../lowLevelComponents/styledText";
 
 const TableHeader = ({values}) => {
     return(
@@ -13,7 +13,7 @@ const TableHeader = ({values}) => {
             borderColor={'lightgray'}
         >
             {values.map(value => (
-                <StyledText color={'gray'} fontSize={'16px'} key={value}>{value}</StyledText>
+                <StyledText color={'gray'} fontSize={'15px'} key={value}>{value}</StyledText>
             ))}
         </StyledView>
     )

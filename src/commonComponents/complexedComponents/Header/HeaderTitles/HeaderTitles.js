@@ -1,13 +1,18 @@
 import React from 'react'
-import StyledView from '../../lowLevelComponents/styledView'
-import StyledText from "../../lowLevelComponents/styledText";
+import {TouchableOpacity} from 'react-native'
+import StyledView from '../../../lowLevelComponents/styledView'
+import StyledText from "../../../lowLevelComponents/styledText";
 
-const HeaderIcons = () => {
+const HeaderIcons = ({headerData: {firstLink, pageTitle, secondLink}}) => {
     return(
         <StyledView flexDirection={'row'} justifyContent={'space-between'}>
-            <StyledText color={'blue'} fontWeight={'bold'} fontSize={'16px'}>Cancel</StyledText>
-            <StyledText fontWeight={'bold'} fontSize={'16px'}>Articles In Carton</StyledText>
-            <StyledText color={'blue'} fontWeight={'bold'} fontSize={'16px'}>Confirm</StyledText>
+            <TouchableOpacity >
+                <StyledText color={'blue'} fontWeight={'bold'} fontSize={'16px'}>{firstLink}</StyledText>
+            </TouchableOpacity>
+            <StyledText fontWeight={'bold'} fontSize={'16px'}>{pageTitle}</StyledText>
+            <TouchableOpacity >
+                <StyledText color={'blue'} fontWeight={'bold'} fontSize={'16px'}>{secondLink}</StyledText>
+            </TouchableOpacity>
         </StyledView>
     )
 }
