@@ -1,6 +1,6 @@
 import React from 'react'
-
-import {StyledView, StyledText} from "../../../Styles/Styles";
+import StyledView from '../../lowLevelComponents/styledView'
+import StyledText from "../../lowLevelComponents/styledText";
 
 const HeaderIcons = () => {
     return(

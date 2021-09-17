@@ -1,5 +1,5 @@
 import React from 'react'
-import More from '../../../icons/right-arrow.svg'
+import More from '../../../assets/icons/right-arrow.svg'
 import { StyledView, StyledText, StyledImage } from '../../../Styles/Styles'
 
 const ItemList = ({item: {code, img, color, size, count, name}}) => {

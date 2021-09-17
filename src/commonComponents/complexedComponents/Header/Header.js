@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledView } from "../../Styles/Styles";
+import StyledView from "../lowLevelComponents/styledView";
 import HeaderIcons from "./HeaderIcons/HeaderIcons";
 import HeaderTitles from "./HeaderTitles/HeaderTitles";
 

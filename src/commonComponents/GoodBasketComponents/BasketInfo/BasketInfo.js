@@ -1,6 +1,6 @@
 import React from 'react'
-import Box from "../../../icons/delivery-box.svg";
-import Tag from "../../../icons/price-tag.svg";
+import Box from "../../../assets/icons/delivery-box.svg";
+import Tag from "../../../assets/icons/price-tag.svg";
 import { StyledView, StyledText } from '../../../Styles/Styles'
 
 const BasketInfo = ({count}) => {

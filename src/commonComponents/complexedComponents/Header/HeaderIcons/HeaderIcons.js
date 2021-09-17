@@ -1,8 +1,9 @@
 import React from 'react'
-import Bluetooth from '../../../icons/bluetooth.svg'
-import Signal from '../../../icons/signal.svg'
-import Cloud from '../../../icons/cloud-computing.svg'
-import {StyledView, StyledText} from "../../../Styles/Styles";
+import Bluetooth from '../../../assets/icons/bluetooth.svg'
+import Signal from '../../../assets/icons/signal.svg'
+import Cloud from '../../../assets/icons/cloud-computing.svg'
+import StyledView from '../../lowLevelComponents/styledView'
+import StyledText from "../../lowLevelComponents/styledText";
 
 const HeaderIcons = () => {
     return(
