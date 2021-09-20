@@ -1,9 +1,9 @@
 import React from 'react'
-import More from '../../../assets/icons/right-arrow.svg'
 import {TouchableOpacity} from 'react-native'
-import StyledView from '../../lowLevelComponents/styledView'
-import StyledText from "../../lowLevelComponents/styledText";
-import StyledImage from "../../lowLevelComponents/styledImage";
+import More from '../../../../assets/icons/right-arrow.svg'
+import StyledView from '../../../../commonComponents/lowLevelComponents/styledView'
+import StyledText from "../../../../commonComponents/lowLevelComponents/styledText";
+import StyledImage from "../../../../commonComponents/lowLevelComponents/styledImage";
 
 
 const ItemList = ({item: {code, imgUri, color, size, count, name}}) => {

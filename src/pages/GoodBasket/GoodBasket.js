@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import StyledView from "../../commonComponents/lowLevelComponents/styledView";
-import BasketInfo from "../../commonComponents/GoodBasketComponents/BasketInfo/BasketInfo";
-import GoodsTable from "../../commonComponents/GoodBasketComponents/GoodTable/GoodTable";
+import BasketInfo from "./components/BasketInfo/BasketInfo";
+import GoodsTable from "./components/GoodTable/GoodTable";
 import Header from "../../commonComponents/complexedComponents/Header/Header";
 
 const goods = [

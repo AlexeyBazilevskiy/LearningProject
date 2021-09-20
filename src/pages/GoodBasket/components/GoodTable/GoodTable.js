@@ -1,29 +1,14 @@
-import React, {useState, useCallback} from 'react'
+import React from 'react'
 import ItemList from '../ItemList/ItemList'
-import StyledView from '../../lowLevelComponents/styledView'
-import TableHeader from "../../complexedComponents/TableHeader/TableHeader";
-import StyledFlatList from "../../lowLevelComponents/styledFlatList";
-import StyledRefreshControl from "../../lowLevelComponents/styledRefreshControl";
+import StyledView from '../../../../commonComponents/lowLevelComponents/styledView'
+import TableHeader from "../../../../commonComponents/complexedComponents/TableHeader/TableHeader";
+import ListOfArray from "../../../../commonComponents/complexedComponents/ListOfArray/ListOfArray";
 
 const GoodsTable = ({goods}) => {
-    const [refreshing, setRefreshing] = useState(false);
-
-    const onRefresh = useCallback(() => {
-        setRefreshing(true);
-        setTimeout(()=>{setRefreshing(false)}, 2000)
-    }, []);
-
     return(
         <StyledView flex={1}>
             <TableHeader values={['ARTICLE', 'ACT']} />
-            <StyledFlatList
-                data={goods}
-                renderItem={ItemList}
-                keyExtractor={(good) => good.code}
-                refreshControl={<StyledRefreshControl
-                    refreshing={refreshing}
-                    onRefresh={onRefresh} />}
-            />
+            <ListOfArray data={goods} renderItem={ItemList} />
         </StyledView>
     )
 }
