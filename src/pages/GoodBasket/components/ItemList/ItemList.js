@@ -1,18 +1,17 @@
 import React from 'react'
-import {TouchableOpacity} from 'react-native'
 import More from '../../../../assets/icons/right-arrow.svg'
 import StyledView from '../../../../commonComponents/lowLevelComponents/styledView'
 import StyledText from "../../../../commonComponents/lowLevelComponents/styledText";
 import StyledImage from "../../../../commonComponents/lowLevelComponents/styledImage";
 
-
 const ItemList = ({item: {code, imgUri, color, size, count, name}}) => {
     return(
-        <TouchableOpacity>
+        <StyledView>
             <StyledView
                 paddingVertical={'10px'}
                 flexDirection={'row'}
                 justifyContent={'space-between'}
+                backgroundColor={'white'}
                 borderBottomWidth={'2px'}
                 borderColor={'lightgray'}
             >
@@ -34,7 +33,7 @@ const ItemList = ({item: {code, imgUri, color, size, count, name}}) => {
                 </StyledView>
                 <More width={10} height={10} fill={'black'} alignSelf={'center'}/>
             </StyledView>
-        </TouchableOpacity>
+        </StyledView>
     )
 }
 
