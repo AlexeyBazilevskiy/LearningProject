@@ -7,7 +7,8 @@ const StyledText = styled.Text`
   ${({color}) => color ? `color: ${color}` : '' };  
   ${({fontWeight}) => fontWeight ? `font-weight: ${fontWeight}` : '' };  
   ${({fontSize}) => fontSize ? `font-size: ${fontSize}` : '' };  
-  ${({lineHeight}) => lineHeight ? `line-height: ${lineHeight}` : ''};  
+  ${({lineHeight}) => lineHeight ? `line-height: ${lineHeight}` : ''}; 
+  ${({textAlign}) => textAlign ? `text-align: ${textAlign}` : ''}; 
   ${({alignSelf}) => alignSelf ? `alignSelf: ${alignSelf}` : '' }; 
 `
 

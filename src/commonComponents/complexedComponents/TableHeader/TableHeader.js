@@ -8,7 +8,8 @@ const TableHeader = ({values}) => {
             flexDirection={'row'}
             justifyContent={'space-between'}
             paddingVertical={'15px'}
-            paddingHorizontal={'15%'}
+            paddingRight={'15%'}
+            paddingLeft={'10px'}
             borderBottomWidth={'2px'}
             borderColor={'lightgray'}
         >
