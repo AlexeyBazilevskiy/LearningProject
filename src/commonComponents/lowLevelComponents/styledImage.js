@@ -8,6 +8,7 @@ import {
   paddingsMixin,
   sizeMixin
 } from "./mixins/mixins";
+
 const StyledImage = styled.Image`
   ${marginsMixin};
   ${paddingsMixin};

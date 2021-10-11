@@ -8,6 +8,7 @@ import {
   paddingsMixin,
   sizeMixin
 } from "./mixins/mixins";
+
 const StyledRefreshControl = styled.RefreshControl`
   ${marginsMixin};
   ${paddingsMixin};

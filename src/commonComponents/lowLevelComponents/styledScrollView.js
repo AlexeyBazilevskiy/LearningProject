@@ -8,6 +8,7 @@ import {
   paddingsMixin,
   sizeMixin
 } from "./mixins/mixins";
+
 const StyledScrollView = styled.ScrollView`
   ${marginsMixin};
   ${paddingsMixin};

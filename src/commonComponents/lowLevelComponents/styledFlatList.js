@@ -8,6 +8,7 @@ import {
   paddingsMixin,
   sizeMixin
 } from "./mixins/mixins";
+
 const StyledFlatList = styled.FlatList`
   ${marginsMixin};
   ${paddingsMixin};
