@@ -4,7 +4,6 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import GoodBasket from "./src/pages/GoodBasket/GoodBasket";
 import Login from "./src/pages/Login/Login";
 import CustomDrawerContent from "./src/commonComponents/complexedComponents/CustomDrawerContent/CustomDrawerContent";
-import StyledText from "./src/commonComponents/lowLevelComponents/styledText";
 
 const Drawer = createDrawerNavigator();
 
