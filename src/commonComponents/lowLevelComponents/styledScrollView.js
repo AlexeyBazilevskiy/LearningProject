@@ -1,4 +1,4 @@
-import styled from "styled-components/native";
+import styled from 'styled-components/native'
 import {
   backgroundMixin,
   borderMixin,
@@ -8,7 +8,7 @@ import {
   paddingsMixin,
   sizeMixin
 } from "./mixins/mixins";
-const StyledRefreshControl = styled.RefreshControl`
+const StyledScrollView = styled.ScrollView`
   ${marginsMixin};
   ${paddingsMixin};
   ${flexMixin};
@@ -18,4 +18,4 @@ const StyledRefreshControl = styled.RefreshControl`
   ${borderMixin};
 `
 
-export default StyledRefreshControl
+export default StyledScrollView
