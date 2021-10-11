@@ -1,4 +1,4 @@
-import styled from "styled-components/native";
+import styled from 'styled-components/native'
 import {
   backgroundMixin,
   borderMixin,
@@ -9,7 +9,7 @@ import {
   sizeMixin
 } from "./mixins/mixins";
 
-const StyledView = styled.View`
+const StyledTouchableOpacity = styled.TouchableOpacity`
   ${marginsMixin};
   ${paddingsMixin};
   ${flexMixin};
@@ -19,4 +19,4 @@ const StyledView = styled.View`
   ${borderMixin};
 `
 
-export default StyledView
+export default StyledTouchableOpacity
