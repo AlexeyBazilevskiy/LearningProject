@@ -9,30 +9,17 @@ import CustomButton from "../../../../commonComponents/complexedComponents/Custo
 import LinkText from "../../../../commonComponents/complexedComponents/LinkText/LinkText";
 import ErrorMessage from "../../../../commonComponents/complexedComponents/ErrorMessage/ErrorMessage";
 import StyledTouchableOpacity from "../../../../commonComponents/lowLevelComponents/styledTouchableOpacity";
+import CheckPass from "../CheckPass/CheckPass";
+import {isEmailValid} from "../../../../validations/emailValidations";
 
 const LoginFrom = () => {
   const [type, setType] = useState(true)
   const [validErr, setValidErr] = useState(false)
-  const [errorText, setErrorText] = useState('')
   const [pass, setPass] = useState('')
   const [name, setName] = useState('')
 
   const sendData = () => {
-    if(pass === '' && name === ''){
-      setErrorText('Fill in all the fields below first')
-      setValidErr(true)
-    }
-    else if(!name.includes('@')){
-      setErrorText('No valid email address')
-      setValidErr(true)
-    }
-    else if(pass.length < 6){
-      setErrorText('Password must have more then 6 symbols')
-      setValidErr(true)
-    }
-    else{
-      setValidErr(false)
-    }
+    setValidErr(isEmailValid)
   }
 
   const showOrHidePass = () => {
@@ -43,7 +30,7 @@ const LoginFrom = () => {
     <StyledView
       margin={30}
     >
-      {validErr && <ErrorMessage text={errorText}/>}
+      {validErr && <ErrorMessage text={'Email is Not Correct'}/>}
       <StyledText
         color={'gray'}
       >
@@ -92,6 +79,9 @@ const LoginFrom = () => {
         text={'FORGOT PASSWORD?'}
         marginTop={'10px'}
         textAlign={'center'}
+      />
+      <CheckPass
+        pass={pass}
       />
     </StyledView>
   )
