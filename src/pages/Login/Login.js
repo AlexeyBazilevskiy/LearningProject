@@ -9,7 +9,7 @@ const Login = () => {
     <StyledScrollView flex={1}>
       <StyledView>
         <StyledView
-          paddingVertical={'50px'}
+          paddingVertical={'70px'}
           backgroundColor={'orange'}
           justifyContent={'center'}
           flexDirection={'row'}>
