@@ -9,8 +9,6 @@ const data = {
     label: 'Data',
     config: {
       color: processColor('lightblue'),
-      barShadowColor: processColor('lightgrey'),
-      highlightAlpha: 90,
       highlightColor: processColor('red'),
     }
   }],
@@ -55,7 +53,6 @@ const Chard = () => {
         visibleRange={{ x: { max: 7 }}}
         marker= {{
           enabled: true,
-          digits: 2,
           markerColor: processColor('red'),
           textColor: processColor('#fff'),
           textSize: 14
