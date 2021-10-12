@@ -1,10 +1,21 @@
 import styled from 'styled-components/native'
-import {marginsMixin, paddingsMixin} from "./mixins/mixins";
+import {
+  backgroundMixin,
+  borderMixin,
+  flexMixin,
+  fontMixin,
+  marginsMixin,
+  paddingsMixin,
+  sizeMixin
+} from "./mixins/mixins";
 
 const StyledImage = styled.Image`
   ${marginsMixin};
-  ${paddingsMixin};    
-  ${({width}) => width ? `width: ${width}` : '' };  
-  ${({height}) => height ? `height: ${height}` : '' };  
+  ${paddingsMixin};
+  ${flexMixin};
+  ${fontMixin};
+  ${sizeMixin};
+  ${backgroundMixin};
+  ${borderMixin}; 
 `
 export default StyledImage

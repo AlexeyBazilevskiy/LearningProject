@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react'
+import {
+    SafeAreaView,
+} from 'react-native';
 import StyledView from "../../commonComponents/lowLevelComponents/styledView";
 import BasketInfo from "./components/BasketInfo/BasketInfo";
 import GoodsTable from "./components/GoodTable/GoodTable";
@@ -22,11 +25,13 @@ const GoodBasket = () => {
     }, [])
 
     return(
-        <StyledView flex={1}>
-            <Header headerData={headerData}/>
-            <BasketInfo count={count} orderId={'25003900020001902003'}/>
-            <GoodsTable goods={goods} />
-        </StyledView>
+      <SafeAreaView flex={1}>
+          <StyledView flex={1}>
+              <Header headerData={headerData}/>
+              <BasketInfo count={count} orderId={'25003900020001902003'}/>
+              <GoodsTable goods={goods} />
+          </StyledView>
+      </SafeAreaView>
     )
 }
 
