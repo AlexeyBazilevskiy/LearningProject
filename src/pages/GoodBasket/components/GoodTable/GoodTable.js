@@ -3,11 +3,11 @@ import ItemList from '../ItemList/ItemList'
 import StyledView from '../../../../commonComponents/lowLevelComponents/styledView'
 import TableHeader from "../../../../commonComponents/complexedComponents/TableHeader/TableHeader";
 import ListOfArray from "../../../../commonComponents/complexedComponents/ListOfArray/ListOfArray";
-
+import I18nJs from "react-native-i18n";
 const GoodsTable = ({goods}) => {
     return(
         <StyledView flex={1}>
-            <TableHeader values={['ARTICLE', 'ACT']} />
+            <TableHeader values={[I18nJs.t('article'), I18nJs.t('act')]} />
             <ListOfArray data={goods} renderItem={ItemList} />
         </StyledView>
     )
