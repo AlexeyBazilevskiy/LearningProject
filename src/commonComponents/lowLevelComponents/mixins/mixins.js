@@ -18,6 +18,34 @@ export const paddingsMixin = css`
   ${({paddingHorizontal}) => paddingHorizontal ? `padding-horizontal: ${paddingHorizontal}` : '' };
 `
 
-// export const Link = styled(StyledText)`
-//     color: blue;
-// `
+export const flexMixin = css`
+  ${({flex}) => flex ? `flex: ${flex}` : ''}
+  ${({flexDirection}) => flexDirection ? `flex-direction: ${flexDirection}` : '' };
+  ${({justifyContent}) => justifyContent ? `justify-content: ${justifyContent}` : ''};
+  ${({alignSelf}) => alignSelf ? `align-self: ${alignSelf}` : '' }; 
+`
+
+export const sizeMixin = css`
+  ${({width}) => width ? `width: ${width}` : '' };  
+  ${({height}) => height ? `height: ${height}` : '' };  
+  ${({minHeight}) => minHeight ? `min-height: ${minHeight}` : ''}
+`
+
+export const backgroundMixin = css`
+  ${({backgroundColor}) => backgroundColor ? `background-color: ${backgroundColor}` : ''};
+`
+
+export const borderMixin = css`
+  ${({borderBottomWidth}) => borderBottomWidth ? `border-bottom-width: ${borderBottomWidth}` : '' };
+  ${({borderWidth}) => borderWidth ? `border-width: ${borderWidth}` : '' };
+  ${({borderColor}) => borderColor ? `border-color: ${borderColor}` : '' };
+  ${({borderRadius}) => borderRadius ? `border-radius: ${borderRadius}` : '' };
+`
+
+export const fontMixin = css`
+  ${({color}) => color ? `color: ${color}` : '' };  
+  ${({fontWeight}) => fontWeight ? `font-weight: ${fontWeight}` : '' };  
+  ${({fontSize}) => fontSize ? `font-size: ${fontSize}` : '' };  
+  ${({lineHeight}) => lineHeight ? `line-height: ${lineHeight}` : ''}; 
+  ${({textAlign}) => textAlign ? `text-align: ${textAlign}` : '' }; 
+`

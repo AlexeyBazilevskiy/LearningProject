@@ -10,7 +10,7 @@ const StyledView = styled.View`
   ${({borderBottomWidth}) => borderBottomWidth ? `border-bottom-width: ${borderBottomWidth}` : '' };
   ${({borderColor}) => borderColor ? `border-color: ${borderColor}` : '' };
   ${({borderRadius}) => borderRadius ? `border-radius: ${borderRadius}` : '' };
-  ${({alignSelf}) => alignSelf ? `alignSelf: ${alignSelf}` : '' }; 
+  ${({alignSelf}) => alignSelf ? `align-self: ${alignSelf}` : '' }; 
 `
 
 export default StyledView

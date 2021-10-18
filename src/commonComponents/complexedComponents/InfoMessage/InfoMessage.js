@@ -2,7 +2,7 @@ import React from 'react'
 import StyledView from "../../lowLevelComponents/styledView";
 import StyledText from "../../lowLevelComponents/styledText";
 
-const ErrorMessage = ({text, bodyStyles, textColor}) => {
+const InfoMessage = ({text, bodyStyles, textColor}) => {
   return(
     <StyledView
       style={bodyStyles}
@@ -20,4 +20,4 @@ const ErrorMessage = ({text, bodyStyles, textColor}) => {
   );
 }
 
-export default ErrorMessage;
+export default InfoMessage;

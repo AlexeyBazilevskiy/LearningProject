@@ -5,7 +5,7 @@ import HeaderTitles from "./HeaderTitles/HeaderTitles";
 
 const Header = ({headerData}) => {
     return(
-        <StyledView paddingVertical={'15px'} borderColor={'gray'} borderBottomWeight={'2px'}>
+        <StyledView paddingVertical={'15px'} borderColor={'gray'} backgroundColor={'#013555'} borderBottomWeight={'2px'}>
             <HeaderIcons />
             <HeaderTitles headerData={headerData}/>
         </StyledView>

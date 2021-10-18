@@ -1,8 +1,8 @@
 import React from 'react'
-import Box from "../../../../assets/icons/delivery-box.svg";
-import Tag from "../../../../assets/icons/price-tag.svg";
-import StyledView from "../../../../commonComponents/lowLevelComponents/styledView";
-import StyledText from "../../../../commonComponents/lowLevelComponents/styledText";
+import Box from "../../../assets/icons/delivery-box.svg";
+import Tag from "../../../assets/icons/price-tag.svg";
+import StyledView from "../../lowLevelComponents/styledView";
+import StyledText from "../../lowLevelComponents/styledText";
 
 const BasketInfo = ({count, orderId}) => {
     return(

@@ -9,11 +9,11 @@ const HeaderIcons = () => {
     return(
         <StyledView flexDirection={'row'} justifyContent={'space-between'} >
             <StyledView flexDirection={'row'}>
-                <Bluetooth width={40} height={40} fill={'#000'} />
-                <StyledText fontSize={'20px'} alignSelf={'center'} >100%</StyledText>
+                <Bluetooth width={40} height={40} fill={'#fff'} />
+                <StyledText fontSize={'20px'} alignSelf={'center'} color={'#fff'}>100%</StyledText>
             </StyledView>
-            <Signal width={40} height={40} marginRight={50} fill={'#000'}/>
-            <Cloud width={40} height={40} fill={'#000'}/>
+            <Signal width={40} height={40} marginRight={50} fill={'#fff'}/>
+            <Cloud width={40} height={40} fill={'#fff'}/>
         </StyledView>
     )
 }
