@@ -24,6 +24,7 @@ export const flexMixin = css`
   ${({flexDirection}) => flexDirection ? `flex-direction: ${flexDirection}` : '' };
   ${({justifyContent}) => justifyContent ? `justify-content: ${justifyContent}` : ''};
   ${({alignSelf}) => alignSelf ? `align-self: ${alignSelf}` : '' }; 
+  ${({alignItems}) => alignItems ? `align-items: ${alignItems}` : '' }; 
 `
 
 export const sizeMixin = css`

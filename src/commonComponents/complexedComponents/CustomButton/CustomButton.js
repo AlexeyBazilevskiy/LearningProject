@@ -1,20 +1,15 @@
-import React, {useState} from 'react'
+import React from 'react'
 import StyledTouchableOpacity from "../../lowLevelComponents/styledTouchableOpacity";
 import StyledText from "../../lowLevelComponents/styledText";
-import {Dimensions} from "react-native";
 
-const CustomButton = ({text, backgroundColor, textColor, onPress, blockStyle}) => {
-  const [windowSize] = useState(Dimensions.get('window'))
-
+const CustomButton = ({text, bodyStyles, textStyles, onPress}) => {
   return(
     <StyledTouchableOpacity
-      style={blockStyle}
+      style={bodyStyles}
       onPress={onPress}
-      backgroundColor={backgroundColor}
     >
       <StyledText
-        color={textColor}
-        textAlign={'center'}
+        style={textStyles}
       >
         {text}
       </StyledText>
