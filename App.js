@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import GoodBasket from "./src/pages/GoodBasket/GoodBasket";
 import CustomDrawerContent from "./src/commonComponents/complexedComponents/CustomDrawerContent/CustomDrawerContent";
-import ScanCount from "./src/pages/ScanCount/ScanCount";
+import SignaturePage from "./src/pages/SignaturePage/SignaturePage";
 
 const Drawer = createDrawerNavigator();
 
@@ -13,12 +13,11 @@ const App = () => {
       <Drawer.Navigator
         drawerContent={(props) => <CustomDrawerContent {...props}/>}
       >
-        <Drawer.Screen name={'Sacn'} component={ScanCount} options={{headerShown: false}} />
+        <Drawer.Screen name={'Signature Page'} component={SignaturePage} />
 
         <Drawer.Screen
-          name="GoodBasked"
+          name="Good Basked"
           component={GoodBasket}
-          options={{headerShown: false}}
         />
 
       </Drawer.Navigator>

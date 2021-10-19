@@ -25,13 +25,11 @@ const GoodBasket = () => {
   }, [])
 
   return(
-    <SafeAreaView flex={1}>
-      <StyledView flex={1}>
-        <Header headerData={headerData}/>
-        <BasketInfo count={count} orderId={'25003900020001902003'}/>
-        <GoodsTable goods={goods} />
-      </StyledView>
-    </SafeAreaView>
+    <StyledView flex={1}>
+      <Header headerData={headerData}/>
+      <BasketInfo count={count} orderId={'25003900020001902003'}/>
+      <GoodsTable goods={goods} />
+    </StyledView>
   )
 }
 

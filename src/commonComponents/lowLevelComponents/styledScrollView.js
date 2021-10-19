@@ -9,7 +9,7 @@ import {
   sizeMixin
 } from "./mixins/mixins";
 
-const StyledText = styled.Text`
+const StyledScrollView = styled.ScrollView`
   ${marginsMixin};
   ${paddingMixin};
   ${fontMixin};
@@ -18,5 +18,4 @@ const StyledText = styled.Text`
   ${sizeMixin};
   ${flexMixin};
 `
-
-export default StyledText
+export default StyledScrollView

@@ -5,18 +5,18 @@ import {
   flexMixin,
   fontMixin,
   marginsMixin,
-  paddingsMixin,
+  paddingMixin,
   sizeMixin
 } from "./mixins/mixins";
 
 const StyledTouchableOpacity = styled.TouchableOpacity`
   ${marginsMixin};
-  ${paddingsMixin};
-  ${flexMixin};
+  ${paddingMixin};
   ${fontMixin};
-  ${sizeMixin};
-  ${backgroundMixin};
   ${borderMixin};
+  ${backgroundMixin};
+  ${sizeMixin};
+  ${flexMixin};
 `
 
 export default StyledTouchableOpacity

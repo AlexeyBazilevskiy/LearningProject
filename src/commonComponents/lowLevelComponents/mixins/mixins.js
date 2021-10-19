@@ -9,7 +9,7 @@ export const marginsMixin = css`
   ${({marginVertical}) => marginVertical ? `margin-vertical: ${marginVertical}` : '' };
 `
 
-export const paddingsMixin = css`
+export const paddingMixin = css`
   ${({paddingTop}) => paddingTop ? `padding-top: ${paddingTop}` : '' };
   ${({paddingBottom}) => paddingBottom ? `padding-bottom: ${paddingBottom}` : '' };
   ${({paddingRight}) => paddingRight ? `padding-right: ${paddingRight}` : '' };
@@ -20,6 +20,7 @@ export const paddingsMixin = css`
 
 export const flexMixin = css`
   ${({flex}) => flex ? `flex: ${flex}` : ''}
+  ${({flexWrap}) => flexWrap ? `flex-wrap: ${flexWrap}` : ''}
   ${({flexDirection}) => flexDirection ? `flex-direction: ${flexDirection}` : '' };
   ${({justifyContent}) => justifyContent ? `justify-content: ${justifyContent}` : ''};
   ${({alignSelf}) => alignSelf ? `align-self: ${alignSelf}` : '' }; 
@@ -29,6 +30,8 @@ export const sizeMixin = css`
   ${({width}) => width ? `width: ${width}` : '' };  
   ${({height}) => height ? `height: ${height}` : '' };  
   ${({minHeight}) => minHeight ? `min-height: ${minHeight}` : ''}
+  ${({minWidth}) => minWidth ? `min-width: ${minWidth}` : ''}
+  ${({maxWidth}) => maxWidth ? `max-width: ${maxWidth}` : ''}
 `
 
 export const backgroundMixin = css`
