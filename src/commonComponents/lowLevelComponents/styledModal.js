@@ -1,4 +1,4 @@
-import styled from "styled-components/native";
+import styled from 'styled-components/native'
 import {
   backgroundMixin,
   borderMixin,
@@ -8,7 +8,7 @@ import {
   sizeMixin
 } from "./mixins/mixins";
 
-const StyledRefreshControl = styled.RefreshControl`
+const StyledModal = styled.Modal`
   ${marginsMixin};
   ${paddingMixin};
   ${borderMixin};
@@ -16,5 +16,4 @@ const StyledRefreshControl = styled.RefreshControl`
   ${sizeMixin};
   ${flexMixin};
 `
-
-export default StyledRefreshControl
+export default StyledModal

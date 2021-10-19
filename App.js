@@ -4,6 +4,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import GoodBasket from "./src/pages/GoodBasket/GoodBasket";
 import CustomDrawerContent from "./src/commonComponents/complexedComponents/CustomDrawerContent/CustomDrawerContent";
 import SignaturePage from "./src/pages/SignaturePage/SignaturePage";
+import ModalPage from "./src/pages/ModalPage/ModalPage";
 
 const Drawer = createDrawerNavigator();
 
@@ -13,8 +14,8 @@ const App = () => {
       <Drawer.Navigator
         drawerContent={(props) => <CustomDrawerContent {...props}/>}
       >
+        <Drawer.Screen name={'Modal page'} component={ModalPage} />
         <Drawer.Screen name={'Signature Page'} component={SignaturePage} />
-
         <Drawer.Screen
           name="Good Basked"
           component={GoodBasket}

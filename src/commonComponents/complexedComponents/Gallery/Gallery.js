@@ -1,6 +1,5 @@
 import React from 'react'
 import StyledImage from "../../lowLevelComponents/styledImage";
-import StyledView from "../../lowLevelComponents/styledView";
 import StyledScrollView from "../../lowLevelComponents/styledScrollView";
 
 const Gallery = ({urls}) => {

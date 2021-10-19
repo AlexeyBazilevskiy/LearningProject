@@ -3,7 +3,6 @@ import {
   backgroundMixin,
   borderMixin,
   flexMixin,
-  fontMixin,
   marginsMixin,
   paddingMixin,
   sizeMixin
@@ -12,7 +11,6 @@ import {
 const StyledImage = styled.Image`
   ${marginsMixin};
   ${paddingMixin};
-  ${fontMixin};
   ${borderMixin};
   ${backgroundMixin};
   ${sizeMixin};
