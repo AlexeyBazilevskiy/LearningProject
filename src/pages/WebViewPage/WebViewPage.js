@@ -14,8 +14,7 @@ const WebViewPage = () => {
     text.style.zIndex = '999'
     text.style.position = 'fixed'
     text.style.backgroundColor = 'green'
-          document.body.append(text);
-
+    document.body.append(text);
     setInterval(() => {
       if(left !== 100){
         left++
