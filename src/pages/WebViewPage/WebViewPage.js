@@ -4,7 +4,7 @@ import InfoMessage from "../../commonComponents/complexedComponents/InfoMessage/
 import StyledView from "../../commonComponents/lowLevelComponents/styledView";
 import I18nJs from "react-native-i18n";
 
-const WebViewPage = () => {
+const WebViewPage = ({route: {params: {url}}}) => {
   const webViewText = `
     const text = document.createElement('h2')
     text.innerText = 'Text'
@@ -27,7 +27,6 @@ const WebViewPage = () => {
       }
     }, 50)
   `;
-
   const renderInfoMess = (text, textColor, bodyStyle) => {
     return(
       <InfoMessage
@@ -40,7 +39,7 @@ const WebViewPage = () => {
   return(
     <StyledView flex={1}>
       <WebView
-        source={{ uri: 'https://github.com/react-native-webview/react-native-webview/blob/master/docs/Reference.md#onmessage' }}
+        source={{ uri: url ? url : 'https://github.com/react-native-webview/react-native-webview/blob/master/docs/Reference.md#onmessage' }}
         renderError={(err) => renderInfoMess( `${I18nJs.t('failLoad')} ${err}`, '#fff', {width: '100%', backgroundColor: '#fe2356'})}
         renderLoading={() => renderInfoMess(I18nJs.t('loading'), '#000', {padding: 20, backgroundColor: 'lightblue'})}
         injectedJavaScript={webViewText}

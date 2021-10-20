@@ -1,20 +1,22 @@
 import React, {useState, useEffect} from 'react'
-import { Dimensions } from 'react-native';
-import MapView, {Marker} from 'react-native-maps';
+import {Dimensions, TouchableWithoutFeedback} from 'react-native';
+import MapView, {Marker, Callout} from 'react-native-maps';
 import { Platform, PermissionsAndroid } from 'react-native';
 import Geolocation from 'react-native-geolocation-service';
 import {PERMISSIONS, request} from "react-native-permissions";
+import StyledText from "../../commonComponents/lowLevelComponents/styledText";
+import I18nJs from "../../language/strings";
+import CustomCallout from "./components/CustomCallout/CustomCallout";
 
-const MapPage = () => {
+const MapPage = ({navigation}) => {
   const [windowSize] = useState(Dimensions.get('window'))
   const [currentPosition, setCurrentPosition] = useState(null)
-  const [region, setRegion] = useState({
+  const [region] = useState({
     latitude: 47.8388,
     longitude: 35.139567,
     latitudeDelta: 0.1922,
     longitudeDelta: 0.0421,
   })
-
   useEffect(async () => {
     if (Platform.OS === 'ios') {
       await request(PERMISSIONS.IOS.LOCATION_WHEN_IN_USE)
@@ -29,7 +31,6 @@ const MapPage = () => {
         setCurrentPosition({latitude: position.coords.latitude, longitude: position.coords.longitude})
       },
       (error) => {
-        // See error code charts below.
         console.log(error.code, error.message);
       },
       { enableHighAccuracy: true, timeout: 15000, maximumAge: 10000 }
@@ -47,10 +48,26 @@ const MapPage = () => {
           latitude: 47.8388,
           longitude: 35.139567,
         }}
-      />
-      {currentPosition && <Marker
-        coordinate={currentPosition}
-      />}
+      >
+        <Callout>
+          <StyledText>{I18nJs.t('randomLocationText')}</StyledText>
+        </Callout
+          >
+      </Marker>
+      {currentPosition &&
+        <Marker
+          coordinate={currentPosition}
+        >
+          <Callout
+            tooltip
+            onPress={() => navigation.navigate(I18nJs.t('webViewHeader'), {
+              url: `https://www.google.com/maps/search/${currentPosition.latitude},+${currentPosition.longitude}`
+            })}
+          >
+            <CustomCallout navigation={navigation} text={I18nJs.t('yourLocationText')} />
+          </Callout>
+        </Marker>
+      }
     </MapView>
   )
 }

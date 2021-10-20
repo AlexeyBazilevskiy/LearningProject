@@ -19,4 +19,7 @@ export default {
   act: 'ACT',
   close: 'Close',
   mapHeader: 'Map Page',
+  randomLocationText: 'Marker on the map',
+  yourLocationText: 'Your geo-position',
+  clickMarker: 'Click to look details',
 }

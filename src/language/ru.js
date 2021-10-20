@@ -19,4 +19,7 @@ export default {
   act: 'КОЛ-ВО',
   close: 'Закрыть',
   mapHeader: 'Карта',
+  randomLocationText: 'Метка на карте',
+  yourLocationText: 'Ваша гео-позиция',
+  clickMarker: 'Нажмите, что бы узнать больше',
 }
