@@ -1,26 +1,25 @@
 import React from 'react'
-import StyledImage from "../../lowLevelComponents/styledImage";
-import StyledScrollView from "../../lowLevelComponents/styledScrollView";
+import StyledFlatList from "../../lowLevelComponents/styledFlatList";
+import GalleryItem from "./GalleryItem/GallaryItem";
+import StyledView from "../../lowLevelComponents/styledView";
+import {useSelector} from "react-redux";
 
-const Gallery = ({urls}) => {
-  console.log(urls)
+const Gallery = ({contentContainerStyle, styles, isHorizontal}) => {
+  const {photoStore: {data}} = useSelector(store => store)
+
   return(
-    <StyledScrollView
+    <StyledView
       flex={1}
-      contentContainerStyle={{flexDirection:'row', flexWrap: 'wrap'}}
+      style={styles}
     >
-      {urls.length !== 0 && urls.map((url) => (
-        <StyledImage
-          source={{url}}
-          key={url}
-          height={'70px'}
-          width={'20%'}
-          borderWidth={'1px'}
-          borderColor={'gray'}
-          marginTop={'5px'}
-        />
-      ))}
-    </StyledScrollView>
+      <StyledFlatList
+        data={data}
+        flex={1}
+        horizontal={isHorizontal ? true : false}
+        contentContainerStyle={contentContainerStyle}
+        renderItem={GalleryItem}
+      />
+     </StyledView>
   )
 }
 

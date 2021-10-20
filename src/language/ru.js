@@ -22,4 +22,5 @@ export default {
   randomLocationText: 'Метка на карте',
   yourLocationText: 'Ваша гео-позиция',
   clickMarker: 'Нажмите, что бы узнать больше',
+  cameraHeader: 'Камера',
 }
