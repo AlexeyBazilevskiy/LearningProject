@@ -23,4 +23,9 @@ export default {
   yourLocationText: 'Ваша гео-позиция',
   clickMarker: 'Нажмите, что бы узнать больше',
   cameraHeader: 'Камера',
+  fingerScannerButton: 'Нажми на кнопку, что бы начать скан',
+  fingerPrintHeader: 'Сканер Отпечатка Пальца',
+  scanErr: 'Это не ваш палец',
+  scanSuccess: 'С пальцем все ок',
+  scanText: 'Нам необхадипо просканировать ваш палец',
 }

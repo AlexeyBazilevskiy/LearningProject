@@ -15,6 +15,7 @@ import reducer from './src/reducers/rootReducer'
 import { persistStore, persistReducer } from 'redux-persist'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { PersistGate } from 'redux-persist/integration/react'
+import FingerPrintScannerPage from "./src/pages/FingerPrintScannerPage/FingerPrintScannerPage";
 
 const persistConfig = {
   key: 'root',
@@ -36,6 +37,7 @@ const App = () => {
           <Drawer.Navigator
             drawerContent={(props) => <CustomDrawerContent {...props}/>}
           >
+            <Drawer.Screen name={I18nJs.t('fingerPrintHeader')} component={FingerPrintScannerPage} />
             <Drawer.Screen name={I18nJs.t('cameraHeader')} component={CameraPage} />
             <Drawer.Screen name={I18nJs.t('mapHeader')} component={MapPage} />
             <Drawer.Screen name={I18nJs.t('webViewHeader')} component={WebViewPage} />
