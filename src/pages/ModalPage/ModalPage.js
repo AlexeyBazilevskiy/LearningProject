@@ -4,21 +4,16 @@ import CustomButton from "../../commonComponents/complexedComponents/CustomButto
 import ModalWindow from "../../commonComponents/complexedComponents/ModalWindow/ModalWindow";
 import I18nJs from "../../language/strings";
 import NotifService from '../../notification/NotifService';
-import {requestNotifications} from 'react-native-permissions';
+import {getImage} from "../../api";
 
 const ModalPage = () => {
   const [modalVisible1, setModalVisible1] = useState(false)
   const [modalVisible2, setModalVisible2] = useState(false)
   const [notif] = useState(new NotifService())
 
-  useEffect( () => {
-    requestNotifications(['alert', 'sound']).then(({status, settings}) => {
-      console.log('ok')
-    });
-  }, [])
-
-  const toggleModal = (buttonNum) => {
+  const toggleModal = async (buttonNum) => {
     notif.localNotif(null, null, null, I18nJs.t(`modal${buttonNum}`))
+    getImage()
     switch (buttonNum) {
       case 1:
         setModalVisible1(!modalVisible1)
