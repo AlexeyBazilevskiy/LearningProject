@@ -1,4 +1,5 @@
 package com.learningproject2;
+import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
 import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
 import android.app.Application;
 import android.content.Context;

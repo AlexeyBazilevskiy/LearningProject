@@ -7,12 +7,14 @@ import CustomButton from "../../commonComponents/complexedComponents/CustomButto
 import Gallery from "../../commonComponents/complexedComponents/Gallery/Gallery";
 import {useDispatch, useSelector} from 'react-redux'
 import {savePictures, saveLocalPictures} from "../../actions/actionCreator";
+import NotifService from '../../notification/NotifService';
 
 const CameraPage = () => {
   const [windowSize] = useState(Dimensions.get('window'))
   const [camera, setCamera] = useState(null)
   const dispatch = useDispatch()
   const {photoStore: {data}} = useSelector(store => store)
+  const [notif] = useState(new NotifService())
 
   useEffect(async () => {
     if(data.length === 0) {
@@ -28,6 +30,7 @@ const CameraPage = () => {
       const options = { quality: 0.5, base64: true };
       const data = await camera.takePictureAsync(options);
       dispatch(savePictures(data.uri))
+      notif.localNotif(null, null, null, 'Snap')
     }
   }
 
