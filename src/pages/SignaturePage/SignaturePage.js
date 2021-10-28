@@ -29,6 +29,7 @@ const SignaturePage = () => {
       />
       <Gallery
         urls={signature}
+
         contentContainerStyle={{flexDirection: 'row', flexWrap: 'wrap'}}
         isHorizontal={false}
       />

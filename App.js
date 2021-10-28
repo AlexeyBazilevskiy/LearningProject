@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import GoodBasket from "./src/pages/GoodBasket/GoodBasket";
@@ -9,13 +9,14 @@ import WebViewPage from "./src/pages/WebViewPage/WebViewPage";
 import I18nJs from "./src/language/strings";
 import MapPage from "./src/pages/MapPage/MapPage";
 import CameraPage from "./src/pages/CameraPage/CameraPage";
-import {Provider} from "react-redux";
+import {Provider, useDispatch} from "react-redux";
 import {createStore} from "redux";
 import reducer from './src/reducers/rootReducer'
 import { persistStore, persistReducer } from 'redux-persist'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { PersistGate } from 'redux-persist/integration/react'
 import FingerPrintScannerPage from "./src/pages/FingerPrintScannerPage/FingerPrintScannerPage";
+import MusicPlayerPage from "./src/pages/MusicPlayerPage/MusicPlayerPage";
 
 const persistConfig = {
   key: 'root',
@@ -37,6 +38,10 @@ const App = () => {
           <Drawer.Navigator
             drawerContent={(props) => <CustomDrawerContent {...props}/>}
           >
+            <Drawer.Screen
+              name={I18nJs.t('musicPlayerHeader')}
+              component={MusicPlayerPage}
+            />
             <Drawer.Screen name={I18nJs.t('fingerPrintHeader')} component={FingerPrintScannerPage} />
             <Drawer.Screen name={I18nJs.t('cameraHeader')} component={CameraPage} />
             <Drawer.Screen name={I18nJs.t('mapHeader')} component={MapPage} />

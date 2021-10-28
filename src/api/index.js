@@ -1,4 +1,5 @@
 import RNFetchBlob from 'rn-fetch-blob'
+import DocumentPicker from 'react-native-document-picker'
 
 export const getImage = () => {
   RNFetchBlob.fetch('GET', 'https://pbs.twimg.com/profile_images/758084549821730820/_HYHtD8F.jpg')
@@ -29,3 +30,15 @@ export const readFile = (path) => {
     console.log('Failed to read file. Error: ',err)
   })
 }
+
+export const getAllMusic = async () => {
+  const res = await DocumentPicker.pickMultiple({type: [DocumentPicker.types.audio], allowMultiSelection: true, copyTo: 'documentDirectory'})
+    .then(result => {
+      return result;
+    })
+    .catch(err => {
+      console.log('e', err);
+    })
+  return res
+}
+

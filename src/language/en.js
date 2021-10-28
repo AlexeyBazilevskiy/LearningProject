@@ -27,5 +27,7 @@ export default {
   fingerPrintHeader: 'Finger Print Scanner',
   scanErr: 'Authenticated error. Try again in a',
   scanSuccess: 'Authenticated successfully',
-  scanText: 'We need scan your finger'
+  scanText: 'We need scan your finger',
+  musicPlayerHeader: 'Music Player',
+  addSong: 'Add song',
 }
