@@ -14,7 +14,7 @@ const ListOfArray = ({data, RenderItem, info}) => {
         <StyledFlatList
             data={data}
             renderItem={({item}) => <RenderItem item={item} info={info} />}
-            keyExtractor={(good, index) => `${good.name}${index}`}
+            keyExtractor={(good, index) => index}
             refreshControl={<StyledRefreshControl
                 refreshing={refreshing}
                 onRefresh={onRefresh} />}

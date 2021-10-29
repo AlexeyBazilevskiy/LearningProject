@@ -3,11 +3,14 @@ import StyledView from "../../../../commonComponents/lowLevelComponents/styledVi
 import StyledText from "../../../../commonComponents/lowLevelComponents/styledText";
 import I18nJs from "../../../../language/strings";
 import INInternet from '../../../../assets/icons/internet.svg'
+import {useTheme} from "@react-navigation/native";
 
 const CustomCallout = ({text}) => {
+  const {colors} = useTheme()
+
   return(
     <StyledView
-      backgroundColor={'white'}
+      backgroundColor={colors.background}
       padding={10}
       borderRadius={'20px'}
     >
@@ -20,6 +23,7 @@ const CustomCallout = ({text}) => {
       <StyledText
         marginVertical={'5px'}
         textAlign={'center'}
+        color={colors.text}
       >
         {I18nJs.t('clickMarker')}
       </StyledText>

@@ -17,10 +17,13 @@ import ICSkipRight from '../../../../assets/icons/skipRight.svg'
 import ICSkipLeft from '../../../../assets/icons/skipLeft.svg'
 import ICMusic from '../../../../assets/icons/musik.svg'
 import {SafeAreaView} from "react-native-safe-area-context";
+import {useTheme} from "@react-navigation/native";
 
 const Player = ({song, songList, isPlayerOpen, onClickOpenPlayer, isMix, setIsMix}) => {
   const [currentSong, setCurrentSong] = useState(song ? song : null)
   const [screenWidth] = useState(Dimensions.get('window').width)
+  const {colors} = useTheme()
+
   const onNextOrPrev = (index) => {
     let songId
     if(isMix){
@@ -65,11 +68,11 @@ const Player = ({song, songList, isPlayerOpen, onClickOpenPlayer, isMix, setIsMi
       animationType="slide"
       onRequestClose={onClickOpenPlayer}
     >
-    <SafeAreaView flex={1} backgroundColor={'#101736'}>
+    <SafeAreaView flex={1} backgroundColor={colors.musicPlayerColor}>
       <PlayerButton Icon={ICSkipLeft} onPress={onClickOpenPlayer} />
 
       <StyledView
-        backgroundColor={'#101736'}
+        backgroundColor={colors.musicPlayerColor}
         flex={1}
         paddingHorizontal={'20px'}
         marginVertical={'60px'}

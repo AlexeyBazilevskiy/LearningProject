@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import StyledView from "../../commonComponents/lowLevelComponents/styledView";
 import CustomButton from "../../commonComponents/complexedComponents/CustomButton/CustomButton";
 import ModalWindow from "../../commonComponents/complexedComponents/ModalWindow/ModalWindow";

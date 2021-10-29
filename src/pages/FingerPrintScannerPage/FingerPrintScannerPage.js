@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import FingerprintScanner from 'react-native-fingerprint-scanner';
-import {Platform} from 'react-native'
 import StyledView from "../../commonComponents/lowLevelComponents/styledView";
 import CustomButton from "../../commonComponents/complexedComponents/CustomButton/CustomButton";
 import I18nJs from "../../language/strings";

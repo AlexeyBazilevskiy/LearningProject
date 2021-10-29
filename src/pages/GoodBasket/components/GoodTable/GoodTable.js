@@ -9,7 +9,7 @@ const GoodsTable = ({goods}) => {
     return(
         <StyledView flex={1}>
             <TableHeader values={[I18nJs.t('article'), I18nJs.t('act')]} />
-            <ListOfArray data={goods} renderItem={ItemList} />
+            {/*<ListOfArray data={goods} renderItem={ItemList} />*/}
         </StyledView>
     )
 }

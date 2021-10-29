@@ -8,12 +8,13 @@ import MusicListItem from "./components/MusicListItem/MusikListItem";
 import CustomButton from "../../commonComponents/complexedComponents/CustomButton/CustomButton";
 import I18nJs from "../../language/strings";
 import Player from "./components/Player/Player";
+import {useTheme} from "@react-navigation/native";
 
 const MusicPlayerPage = ({navigation}) => {
   const [isPlayerOpen, setIsPlayerOpen] = useState(false)
   const [playingSong, setPlayingSong] = useState(null)
   const [isMix, setIsMix] = useState(false)
-
+  const {colors} = useTheme()
   const dispatch = useDispatch()
   const {musicStore: {data}} = useSelector(state => state)
 
@@ -48,6 +49,7 @@ const MusicPlayerPage = ({navigation}) => {
           bodyStyles={{
             marginHorizontal: 20,
           }}
+          textStyles={{color: colors.text}}
         />
       ),
     })
