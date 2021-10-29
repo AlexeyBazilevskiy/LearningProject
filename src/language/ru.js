@@ -30,4 +30,5 @@ export default {
   scanText: 'Нам необхадипо просканировать ваш палец',
   musicPlayerHeader: 'Музыка',
   addSong: 'Добавить',
+  qrCodePage: 'Qr Код Сканер',
 }

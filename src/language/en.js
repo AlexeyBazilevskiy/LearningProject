@@ -30,4 +30,5 @@ export default {
   scanText: 'We need scan your finger',
   musicPlayerHeader: 'Music Player',
   addSong: 'Add song',
+  qrCodePage: 'Qr Code Scanner',
 }
