@@ -7,7 +7,7 @@ import {SafeAreaView} from "react-native-safe-area-context";
 const CustomDrawerContent = (props) => {
   const history = props.state.history
   return(
-    <SafeAreaView flex={1} backgroundColor={'whitesmoke'}>
+    <SafeAreaView flex={1} backgroundColor={'whitesmoke'} marginTop={10}>
       <ListOfArray
         data={props.state.routes}
         RenderItem={CustomDrawerItem}
