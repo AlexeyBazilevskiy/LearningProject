@@ -9,7 +9,7 @@ export const marginsMixin = css`
   ${({marginVertical}) => marginVertical ? `margin-vertical: ${marginVertical}` : '' };
 `
 
-export const paddingsMixin = css`
+export const paddingMixin = css`
   ${({paddingTop}) => paddingTop ? `padding-top: ${paddingTop}` : '' };
   ${({paddingBottom}) => paddingBottom ? `padding-bottom: ${paddingBottom}` : '' };
   ${({paddingRight}) => paddingRight ? `padding-right: ${paddingRight}` : '' };
@@ -18,6 +18,38 @@ export const paddingsMixin = css`
   ${({paddingHorizontal}) => paddingHorizontal ? `padding-horizontal: ${paddingHorizontal}` : '' };
 `
 
-// export const Link = styled(StyledText)`
-//     color: blue;
-// `
+export const flexMixin = css`
+  ${({flex}) => flex ? `flex: ${flex}` : ''}
+  ${({flexWrap}) => flexWrap ? `flex-wrap: ${flexWrap}` : ''}
+  ${({flexDirection}) => flexDirection ? `flex-direction: ${flexDirection}` : '' };
+  ${({justifyContent}) => justifyContent ? `justify-content: ${justifyContent}` : ''};
+  ${({alignSelf}) => alignSelf ? `align-self: ${alignSelf}` : '' }; 
+  ${({alignItems}) => alignItems ? `align-items: ${alignItems}` : '' }; 
+`
+
+export const sizeMixin = css`
+  ${({width}) => width ? `width: ${width}` : '' };  
+  ${({height}) => height ? `height: ${height}` : '' };  
+  ${({minHeight}) => minHeight ? `min-height: ${minHeight}` : ''}
+  ${({minWidth}) => minWidth ? `min-width: ${minWidth}` : ''}
+  ${({maxWidth}) => maxWidth ? `max-width: ${maxWidth}` : ''}
+`
+
+export const backgroundMixin = css`
+  ${({backgroundColor}) => backgroundColor ? `background-color: ${backgroundColor}` : ''};
+`
+
+export const borderMixin = css`
+  ${({borderBottomWidth}) => borderBottomWidth ? `border-bottom-width: ${borderBottomWidth}` : '' };
+  ${({borderWidth}) => borderWidth ? `border-width: ${borderWidth}` : '' };
+  ${({borderColor}) => borderColor ? `border-color: ${borderColor}` : '' };
+  ${({borderRadius}) => borderRadius ? `border-radius: ${borderRadius}` : '' };
+`
+
+export const fontMixin = css`
+  ${({color}) => color ? `color: ${color}` : '' };  
+  ${({fontWeight}) => fontWeight ? `font-weight: ${fontWeight}` : '' };  
+  ${({fontSize}) => fontSize ? `font-size: ${fontSize}` : '' };  
+  ${({lineHeight}) => lineHeight ? `line-height: ${lineHeight}` : ''}; 
+  ${({textAlign}) => textAlign ? `text-align: ${textAlign}` : '' }; 
+`

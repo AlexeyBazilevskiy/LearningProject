@@ -1,8 +1,11 @@
 import React from 'react'
 import StyledView from "../../lowLevelComponents/styledView";
 import StyledText from "../../lowLevelComponents/styledText";
+import { useTheme } from '@react-navigation/native';
 
 const TableHeader = ({values}) => {
+    const {colors} = useTheme()
+
     return(
         <StyledView
             flexDirection={'row'}
@@ -10,10 +13,10 @@ const TableHeader = ({values}) => {
             paddingVertical={'15px'}
             paddingHorizontal={'15%'}
             borderBottomWidth={'2px'}
-            borderColor={'lightgray'}
+            borderColor={colors.tableBorder}
         >
             {values.map(value => (
-                <StyledText color={'gray'} fontSize={'15px'} key={value}>{value}</StyledText>
+                <StyledText color={colors.tableText} fontSize={'15px'} key={value}>{value}</StyledText>
             ))}
         </StyledView>
     )

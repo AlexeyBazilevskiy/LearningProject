@@ -1,9 +1,20 @@
 import styled from "styled-components/native";
-import {marginsMixin, paddingsMixin} from "./mixins/mixins";
+import {
+  backgroundMixin,
+  borderMixin,
+  flexMixin,
+  marginsMixin,
+  paddingMixin,
+  sizeMixin
+} from "./mixins/mixins";
 
 const StyledRefreshControl = styled.RefreshControl`
   ${marginsMixin};
-  ${paddingsMixin};
+  ${paddingMixin};
+  ${borderMixin};
+  ${backgroundMixin};
+  ${sizeMixin};
+  ${flexMixin};
 `
 
 export default StyledRefreshControl
