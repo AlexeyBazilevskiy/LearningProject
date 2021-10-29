@@ -1,16 +1,22 @@
 import React from 'react'
-import {DrawerContentScrollView, DrawerItem, DrawerItemList} from "@react-navigation/drawer";
-import I18nJs from "react-native-i18n";
+import ListOfArray from "../ListOfArray/ListOfArray";
+import CustomDrawerItem from "./CustomDrawerItem/CustomDrawerItem";
+import ICRight from '../../../assets/icons/right-arrow.svg'
+import {SafeAreaView} from "react-native-safe-area-context";
 
 const CustomDrawerContent = (props) => {
+  const history = props.state.history
   return(
-    <DrawerContentScrollView {...props}>
-      <DrawerItemList {...props} />
-      <DrawerItem
-        label={I18nJs.t('close')}
-        onPress={() => props.navigation.closeDrawer()}
+    <SafeAreaView flex={1} backgroundColor={'whitesmoke'}>
+      <ListOfArray
+        data={props.state.routes}
+        RenderItem={CustomDrawerItem}
+        info={{
+          Icon: ICRight,
+          navigation: props.navigation,
+          current: history.length < 2 ? history[props.state.history.length - 1] : history[props.state.history.length - 2]}}
       />
-    </DrawerContentScrollView>
+    </SafeAreaView>
   )
 }
 
