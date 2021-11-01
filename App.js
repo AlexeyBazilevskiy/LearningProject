@@ -9,7 +9,7 @@ import WebViewPage from "./src/pages/WebViewPage/WebViewPage";
 import I18nJs from "./src/language/strings";
 import MapPage from "./src/pages/MapPage/MapPage";
 import CameraPage from "./src/pages/CameraPage/CameraPage";
-import {Provider, useDispatch} from "react-redux";
+import {Provider} from "react-redux";
 import {createStore} from "redux";
 import reducer from './src/reducers/rootReducer'
 import { persistStore, persistReducer } from 'redux-persist'
@@ -20,6 +20,7 @@ import MusicPlayerPage from "./src/pages/MusicPlayerPage/MusicPlayerPage";
 
 const persistConfig = {
   key: 'root',
+  blacklist: ['currentSongStore'],
   storage: AsyncStorage,
 }
 

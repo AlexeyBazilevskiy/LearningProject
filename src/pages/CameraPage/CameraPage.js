@@ -57,6 +57,7 @@ const CameraPage = () => {
         onPress={onSnap}
       />
       <Gallery
+        data={data}
         contentContainerStyle={{flexDirection: 'row'}}
         styles={{position: 'absolute', top: Platform.OS === 'ios' ? windowSize.height * .75 : windowSize.height * .75}}
         isHorizontal={true}

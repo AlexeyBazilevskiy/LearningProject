@@ -103,9 +103,6 @@ const Player = ({song, songList, isPlayerOpen, onClickOpenPlayer, isMix, setIsMi
           flexDirection={'row'}
           justifyContent={'space-around'}
         >
-
-          {/*TODO: Переделать испольщуя useMemo*/ }
-
           <PlayerButton Icon={ICSkipLeft} onPress={() => {onNextOrPrev(currentSong.index - 1)}} />
           <PlayerButton Icon={isPlay ? ICPause : ICPlay} onPress={isPlay? onPause : onPlay} />
           <PlayerButton Icon={ICSkipRight} onPress={() => {onNextOrPrev(currentSong.index + 1)}} />

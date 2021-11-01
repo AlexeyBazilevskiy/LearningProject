@@ -7,7 +7,8 @@ import musicIcon from '../assets/icons/music.png'
 
 export const usePlayer = (name, uri, index, onNextOrPrev) => {
   Sound.setCategory('Playback');
-  const {musicStore: {currentSong}} = useSelector(state => state)
+  const {currentSongStore: {currentSong}} = useSelector(state => state)
+  const store = useSelector(state => state)
   const [song, setSong] = useState(null)
   const [isPlay, setIsPlay] = useState(false)
   const [isLoop, setIsLoop] = useState(false)
@@ -17,7 +18,8 @@ export const usePlayer = (name, uri, index, onNextOrPrev) => {
   const dispatch = useDispatch()
 
   useEffect(async () => {
-    if(currentSong && currentSong.current._filename === uri && currentSong.current.onPlaySubscription) {
+    console.log(store)
+    if(currentSong && currentSong.current._filename === uri) {
       setSong(currentSong.current)
       setIsLoop(currentSong.looping)
       setIsPlay(currentSong.current._playing)

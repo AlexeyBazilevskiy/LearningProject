@@ -28,8 +28,7 @@ const SignaturePage = () => {
         imageType={'image/png+xml'}
       />
       <Gallery
-        urls={signature}
-
+        data={signature}
         contentContainerStyle={{flexDirection: 'row', flexWrap: 'wrap'}}
         isHorizontal={false}
       />

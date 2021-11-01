@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import StyledView from "../../commonComponents/lowLevelComponents/styledView";
 import {getAllMusic} from "../../api";
 import {useDispatch, useSelector} from "react-redux";
-import {getLocalMusic, playSong} from "../../actions/actionCreator";
+import {getLocalMusic} from "../../actions/actionCreator";
 import ListOfArray from "../../commonComponents/complexedComponents/ListOfArray/ListOfArray";
 import MusicListItem from "./components/MusicListItem/MusikListItem";
 import CustomButton from "../../commonComponents/complexedComponents/CustomButton/CustomButton";
@@ -16,6 +16,7 @@ const MusicPlayerPage = ({navigation}) => {
 
   const dispatch = useDispatch()
   const {musicStore: {data}} = useSelector(state => state)
+  const state = useSelector(state => state)
 
   const onClickOpenPlayer = (song) => {
     setPlayingSong(!isPlayerOpen ? {name: song.name, uri: song.fileCopyUri, index: data.indexOf(song)} : null)
@@ -23,13 +24,8 @@ const MusicPlayerPage = ({navigation}) => {
   }
 
   useEffect(async () => {
+    console.log(state)
     addSongButton()
-    if(data.length < 0) {
-      await addSongs()
-    }
-    return(() =>{
-      dispatch(playSong(null))
-    })
   },[])
 
   const addSongs = async () => {
