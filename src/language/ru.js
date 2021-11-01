@@ -28,4 +28,6 @@ export default {
   scanErr: 'Это не ваш палец',
   scanSuccess: 'С пальцем все ок',
   scanText: 'Нам необхадипо просканировать ваш палец',
+  musicPlayerHeader: 'Музыка',
+  addSong: 'Добавить',
 }

@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { RNCamera } from 'react-native-camera';
-import {PERMISSIONS, request} from "react-native-permissions";
 import CameraRoll from '@react-native-community/cameraroll'
-import {Dimensions, Platform, PermissionsAndroid, SafeAreaView} from 'react-native'
+import {Dimensions, Platform, SafeAreaView} from 'react-native'
 import CustomButton from "../../commonComponents/complexedComponents/CustomButton/CustomButton";
 import Gallery from "../../commonComponents/complexedComponents/Gallery/Gallery";
 import {useDispatch, useSelector} from 'react-redux'
@@ -39,7 +38,7 @@ const CameraPage = () => {
       <RNCamera
         ref={setCamera}
         width={windowSize.width}
-        height={Platform.OS === 'ios' ? windowSize.height * .75 : windowSize.height * .8}
+        height={Platform.OS === 'ios' ? windowSize.height * .75 : windowSize.height * .75}
       />
       <CustomButton
         text={''}
@@ -53,13 +52,14 @@ const CameraPage = () => {
           position: 'absolute',
           alignSelf: 'center',
           zIndex: 3,
-          top: Platform.OS === 'ios' ? windowSize.height * .65 : windowSize.height * .7
+          top: Platform.OS === 'ios' ? windowSize.height * .65 : windowSize.height * .65
         }}
         onPress={onSnap}
       />
       <Gallery
+        data={data}
         contentContainerStyle={{flexDirection: 'row'}}
-        styles={{position: 'absolute', top: Platform.OS === 'ios' ? windowSize.height * .75 : windowSize.height * .8}}
+        styles={{position: 'absolute', top: Platform.OS === 'ios' ? windowSize.height * .75 : windowSize.height * .75}}
         isHorizontal={true}
       />
     </SafeAreaView>

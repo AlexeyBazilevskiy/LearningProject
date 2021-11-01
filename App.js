@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import GoodBasket from "./src/pages/GoodBasket/GoodBasket";
@@ -16,9 +16,11 @@ import { persistStore, persistReducer } from 'redux-persist'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { PersistGate } from 'redux-persist/integration/react'
 import FingerPrintScannerPage from "./src/pages/FingerPrintScannerPage/FingerPrintScannerPage";
+import MusicPlayerPage from "./src/pages/MusicPlayerPage/MusicPlayerPage";
 
 const persistConfig = {
   key: 'root',
+  blacklist: ['currentSongStore'],
   storage: AsyncStorage,
 }
 
@@ -37,6 +39,10 @@ const App = () => {
           <Drawer.Navigator
             drawerContent={(props) => <CustomDrawerContent {...props}/>}
           >
+            <Drawer.Screen
+              name={I18nJs.t('musicPlayerHeader')}
+              component={MusicPlayerPage}
+            />
             <Drawer.Screen name={I18nJs.t('fingerPrintHeader')} component={FingerPrintScannerPage} />
             <Drawer.Screen name={I18nJs.t('cameraHeader')} component={CameraPage} />
             <Drawer.Screen name={I18nJs.t('mapHeader')} component={MapPage} />
