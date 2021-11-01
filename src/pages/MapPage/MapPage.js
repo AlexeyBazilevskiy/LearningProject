@@ -61,6 +61,7 @@ const MapPage = ({navigation}) => {
       Geolocation.clearWatch(timer)
     }
   }
+  console.log('ee', arrayOfCurrentPos);
   return (
     <StyledView flex={1}>
       <MapView
