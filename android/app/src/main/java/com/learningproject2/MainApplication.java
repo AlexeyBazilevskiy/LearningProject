@@ -2,6 +2,7 @@ package com.learningproject2;
 import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
 import android.app.Application;
 import android.content.Context;
+import com.hieuvp.fingerprint.ReactNativeFingerprintScannerPackage;
 import com.reactnativecommunity.cameraroll.CameraRollPackage;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;

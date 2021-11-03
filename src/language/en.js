@@ -23,4 +23,9 @@ export default {
   yourLocationText: 'Your geo-position',
   clickMarker: 'Click to look details',
   cameraHeader: 'Camera',
+  fingerScannerButton: 'Press on the button to start scanning',
+  fingerPrintHeader: 'Finger Print Scanner',
+  scanErr: 'Authenticated error. Try again in a',
+  scanSuccess: 'Authenticated successfully',
+  scanText: 'We need scan your finger'
 }
