@@ -7,11 +7,11 @@ const HeaderIcons = ({headerData: {firstLink, pageTitle, secondLink}}) => {
     return(
         <StyledView flexDirection={'row'} justifyContent={'space-between'}>
             <TouchableOpacity >
-                <StyledText color={'blue'} fontWeight={'bold'} fontSize={'16px'}>{firstLink}</StyledText>
+                <StyledText color={'#fff'} fontWeight={'bold'} fontSize={'16px'}>{firstLink}</StyledText>
             </TouchableOpacity>
-            <StyledText fontWeight={'bold'} fontSize={'16px'}>{pageTitle}</StyledText>
+            <StyledText fontWeight={'bold'} color={'#fff'} fontSize={'16px'}>{pageTitle}</StyledText>
             <TouchableOpacity >
-                <StyledText color={'blue'} fontWeight={'bold'} fontSize={'16px'}>{secondLink}</StyledText>
+                <StyledText color={'#fff'} fontWeight={'bold'} fontSize={'16px'}>{secondLink}</StyledText>
             </TouchableOpacity>
         </StyledView>
     )
