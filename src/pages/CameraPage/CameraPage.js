@@ -16,9 +16,8 @@ const CameraPage = () => {
 
   useEffect(async () => {
     if(data.length === 0) {
-      const data = await CameraRoll.getPhotos({first: 10})
-      const uris = []
-      data.edges.filter(item => uris.push(item.node.image.uri))
+      const info = await CameraRoll.getPhotos({first: 10})
+      const uris = info.edges.map(({node: {image: {uri}}}) => uri)
       dispatch(saveLocalPictures(uris))
     }
   }, [])
