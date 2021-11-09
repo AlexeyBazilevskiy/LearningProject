@@ -54,25 +54,6 @@ const flashMessageButtonProps = [
 ]
 
 const FlashMessagePage = () => {
-
-  const renderButtons = () => {
-    return flashMessageButtonProps.map(({backgroundColor, text, flashMessageProps, onPress}, index) => (
-      <CustomButton
-        key={index}
-        textStyles={{color: 'white', textAlign: 'center'}}
-        text={text}
-        bodyStyles={{borderRadius: 20, padding: 10, marginTop: 10, backgroundColor}}
-        onPress={onPress ? onPress : () => {
-          showMessage({
-            message: I18nJs.t('messageText'),
-            description: I18nJs.t('messageDescText'),
-            ...flashMessageProps
-          })
-        }}
-      />
-    ))
-  }
-
   return(
     <StyledView
       flex={1}
@@ -80,7 +61,21 @@ const FlashMessagePage = () => {
       flexWrap={'wrap'}
       justifyContent={'space-around'}
     >
-      {renderButtons()}
+      {flashMessageButtonProps.map(({backgroundColor, text, flashMessageProps, onPress}, index) => (
+        <CustomButton
+          key={index}
+          textStyles={{color: 'white', textAlign: 'center'}}
+          text={text}
+          bodyStyles={{borderRadius: 20, padding: 10, marginTop: 10, backgroundColor}}
+          onPress={onPress ? onPress : () => {
+            showMessage({
+              message: I18nJs.t('messageText'),
+              description: I18nJs.t('messageDescText'),
+              ...flashMessageProps
+            })
+          }}
+        />
+      ))}
       <FlashMessage statusBarHeight={0} icon={'auto'} />
     </StyledView>
   )
