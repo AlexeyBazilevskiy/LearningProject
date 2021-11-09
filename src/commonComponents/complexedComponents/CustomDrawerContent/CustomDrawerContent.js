@@ -1,13 +1,14 @@
 import React from 'react'
 import {DrawerContentScrollView, DrawerItem, DrawerItemList} from "@react-navigation/drawer";
+import I18nJs from "react-native-i18n";
 
 const CustomDrawerContent = (props) => {
   return(
     <DrawerContentScrollView {...props}>
       <DrawerItemList {...props} />
       <DrawerItem
-        label="Close drawer"
-        onPress={() => props.navigation.closeDrawer()}
+        label={I18nJs.t('close')}
+        onPress={props.navigation.closeDrawer}
       />
     </DrawerContentScrollView>
   )

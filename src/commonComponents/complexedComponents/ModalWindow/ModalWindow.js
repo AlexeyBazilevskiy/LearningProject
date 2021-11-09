@@ -5,6 +5,7 @@ import StyledModal from "../../lowLevelComponents/styledModal";
 import CustomButton from "../CustomButton/CustomButton";
 import StyledTouchableOpacity from "../../lowLevelComponents/styledTouchableOpacity";
 import {TouchableWithoutFeedback} from "react-native";
+import I18nJs from "../../../language/strings";
 
 const ModalWindow = ({modalVisible, toggleModal, text}) => {
   return(
@@ -31,7 +32,7 @@ const ModalWindow = ({modalVisible, toggleModal, text}) => {
             >
               {text}
             </StyledText>
-            <CustomButton onPress={toggleModal} textStyles={{textAlign: 'center'}} bodyStyles={{borderRadius: 10, backgroundColor: 'lightblue', padding: 10}} text={'Close Modal'} />
+            <CustomButton onPress={toggleModal} textStyles={{textAlign: 'center'}} bodyStyles={{borderRadius: 10, backgroundColor: 'lightblue', padding: 10}} text={I18nJs.t('closeModal')} />
           </StyledView>
         </TouchableWithoutFeedback>
       </StyledTouchableOpacity>

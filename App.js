@@ -6,6 +6,8 @@ import CustomDrawerContent from "./src/commonComponents/complexedComponents/Cust
 import SignaturePage from "./src/pages/SignaturePage/SignaturePage";
 import ModalPage from "./src/pages/ModalPage/ModalPage";
 import WebViewPage from "./src/pages/WebViewPage/WebViewPage";
+import I18nJs from "./src/language/strings";
+import MapPage from "./src/pages/MapPage/MapPage";
 
 const Drawer = createDrawerNavigator();
 
@@ -15,11 +17,12 @@ const App = () => {
       <Drawer.Navigator
         drawerContent={(props) => <CustomDrawerContent {...props}/>}
       >
-        <Drawer.Screen name={'WebView page'} component={WebViewPage} />
-        <Drawer.Screen name={'Modal page'} component={ModalPage} />
-        <Drawer.Screen name={'Signature Page'} component={SignaturePage} />
+        <Drawer.Screen name={I18nJs.t('mapHeader')} component={MapPage} />
+        <Drawer.Screen name={I18nJs.t('webViewHeader')} component={WebViewPage} />
+        <Drawer.Screen name={I18nJs.t('modalHeader')} component={ModalPage} />
+        <Drawer.Screen name={I18nJs.t('signatureHeader')} component={SignaturePage} />
         <Drawer.Screen
-          name="Good Basked"
+          name={I18nJs.t('goodBasketHeader')}
           component={GoodBasket}
         />
 
