@@ -24,6 +24,8 @@ target 'LearningProject2' do
 
   pod 'RNFS', :path => '../node_modules/react-native-fs'
 
+  pod 'RNSensors', :path => '../node_modules/react-native-sensors'
+
   target 'LearningProject2Tests' do
     inherit! :complete
     # Pods for testing
