@@ -70,7 +70,7 @@ const App = () => {
       <PersistGate loading={null} persistor={persistor}>
         <NavigationContainer theme={scheme === 'dark' ? MyDarkTheme : MyTheme}>
           <Drawer.Navigator
-            drawerContent={(props) => <CustomDrawerContent {...props}/>}
+            drawerContent={CustomDrawerContent}
           >
             <Drawer.Screen name={I18nJs.t('qrCodePage')} component={QrCodeScannerPage}
                            // options={{headerShown: false}}
