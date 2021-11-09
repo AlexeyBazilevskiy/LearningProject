@@ -8,7 +8,7 @@ const CustomDrawerContent = (props) => {
       <DrawerItemList {...props} />
       <DrawerItem
         label={I18nJs.t('close')}
-        onPress={() => props.navigation.closeDrawer()}
+        onPress={props.navigation.closeDrawer}
       />
     </DrawerContentScrollView>
   )
