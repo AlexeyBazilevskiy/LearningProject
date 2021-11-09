@@ -42,4 +42,6 @@ export default {
   hideMessage: 'Hide message',
   messageText: 'Message',
   messageDescText: 'Message description',
+  startTracking: 'Start Tracking',
+  finishTracking: 'Finish Tracking',
 }

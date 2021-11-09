@@ -42,4 +42,6 @@ export default {
   hideMessage: 'Спрятать сообщение',
   messageText: 'Сообщение',
   messageDescText: 'Описание сообщения',
+  startTracking: 'Начать отслеживание',
+  finishTracking: 'Закончить отслеживание',
 }
