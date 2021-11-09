@@ -39,7 +39,9 @@ const App = () => {
           <Drawer.Navigator
             drawerContent={(props) => <CustomDrawerContent {...props}/>}
           >
-            <Drawer.Screen name={I18nJs.t('qrCodePage')} component={QrCodeScannerPage} options={{headerShown: false}}/>
+            <Drawer.Screen name={I18nJs.t('qrCodePage')} component={QrCodeScannerPage}
+                           // options={{headerShown: false}}
+            />
             <Drawer.Screen name={I18nJs.t('musicPlayerHeader')} component={MusicPlayerPage}/>
             <Drawer.Screen name={I18nJs.t('fingerPrintHeader')} component={FingerPrintScannerPage} />
             <Drawer.Screen name={I18nJs.t('cameraHeader')} component={CameraPage} />
