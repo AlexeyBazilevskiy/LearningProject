@@ -22,4 +22,5 @@ export default {
   randomLocationText: 'Marker on the map',
   yourLocationText: 'Your geo-position',
   clickMarker: 'Click to look details',
+  cameraHeader: 'Camera',
 }

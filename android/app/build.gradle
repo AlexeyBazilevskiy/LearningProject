@@ -131,6 +131,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        missingDimensionStrategy 'react-native-camera', 'general' // <--- insert this line
     }
     splits {
         abi {
@@ -191,7 +192,7 @@ dependencies {
     compile project(':react-native-i18n')
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
-
+    compile project(':@react-native-community_cameraroll')
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
       exclude group:'com.facebook.fbjni'
     }

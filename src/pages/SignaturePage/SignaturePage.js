@@ -27,7 +27,11 @@ const SignaturePage = () => {
         clearText={I18nJs.t('clearButt')}
         imageType={'image/png+xml'}
       />
-      <Gallery urls={signature}/>
+      <Gallery
+        data={signature}
+        contentContainerStyle={{flexDirection: 'row', flexWrap: 'wrap'}}
+        isHorizontal={false}
+      />
     </StyledView>
   )
 }
