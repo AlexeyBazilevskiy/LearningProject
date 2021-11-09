@@ -16,7 +16,7 @@ const App = () => {
         drawerContent={(props) => <CustomDrawerContent {...props}/>}
       >
         <Drawer.Screen name={'WebView page'} component={WebViewPage} />
-        <Drawer.Screen name={'Modal page'} component={ModalPage} />
+        <Drawer.Screen name={'Modal window`s page'} component={ModalPage} />
         <Drawer.Screen name={'Signature Page'} component={SignaturePage} />
         <Drawer.Screen
           name="Good Basked"
