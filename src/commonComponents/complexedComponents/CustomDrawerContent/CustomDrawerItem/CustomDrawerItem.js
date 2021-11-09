@@ -10,7 +10,7 @@ const CustomDrawerItem = ({item: {name, key}, info: {navigation, Icon, current}}
 
   return(
     <StyledTouchableOpacity
-    onPress={onPresDrawerItem}
+      onPress={onPresDrawerItem}
     >
       <StyledView
         borderRadius={'20px'}
