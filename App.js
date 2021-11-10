@@ -18,6 +18,7 @@ import { PersistGate } from 'redux-persist/integration/react'
 import FingerPrintScannerPage from "./src/pages/FingerPrintScannerPage/FingerPrintScannerPage";
 import MusicPlayerPage from "./src/pages/MusicPlayerPage/MusicPlayerPage";
 import QrCodeScannerPage from "./src/pages/QrCodeScanerPage/QrCodeScannerPage";
+import FlashMessagePage from "./src/pages/FlashMessagePage/FlashMessagePage";
 
 const persistConfig = {
   key: 'root',
@@ -39,6 +40,7 @@ const App = () => {
           <Drawer.Navigator
             drawerContent={(props) => <CustomDrawerContent {...props}/>}
           >
+            <Drawer.Screen name={I18nJs.t('flashMessage')} component={FlashMessagePage}/>
             <Drawer.Screen name={I18nJs.t('qrCodePage')} component={QrCodeScannerPage}
                            // options={{headerShown: false}}
             />
