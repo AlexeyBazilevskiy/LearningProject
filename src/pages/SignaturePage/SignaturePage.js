@@ -1,22 +1,22 @@
-import React, {useState} from 'react'
-import Signature from 'react-native-signature-canvas'
-import Gallery from "../../commonComponents/complexedComponents/Gallery/Gallery";
-import StyledView from "../../commonComponents/lowLevelComponents/styledView";
-import I18nJs from "react-native-i18n";
+import React, {useState} from 'react';
+import Signature from 'react-native-signature-canvas';
+import Gallery from '../../commonComponents/complexedComponents/Gallery/Gallery';
+import StyledView from '../../commonComponents/lowLevelComponents/styledView';
+import I18nJs from 'react-native-i18n';
 
 const SignaturePage = () => {
-  const [signature, setSignature] = useState([])
+  const [signature, setSignature] = useState([]);
 
-  const handleOk = (url) => {
-    const urls = [...signature, url]
-    setSignature(urls)
-  }
+  const handleOk = url => {
+    const urls = [...signature, url];
+    setSignature(urls);
+  };
 
   const handleClear = () => {
-    setSignature([])
-  }
+    setSignature([]);
+  };
 
-  return(
+  return (
     <StyledView flex={1}>
       <Signature
         onOK={handleOk}
@@ -29,12 +29,11 @@ const SignaturePage = () => {
       />
       <Gallery
         urls={signature}
-
         contentContainerStyle={{flexDirection: 'row', flexWrap: 'wrap'}}
         isHorizontal={false}
       />
     </StyledView>
-  )
-}
+  );
+};
 
-export default SignaturePage
+export default SignaturePage;

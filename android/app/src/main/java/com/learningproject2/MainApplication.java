@@ -5,6 +5,7 @@ import android.app.Application;
 import android.content.Context;
 import com.hieuvp.fingerprint.ReactNativeFingerprintScannerPackage;
 import com.reactnativecommunity.cameraroll.CameraRollPackage;
+import com.sensors.RNSensorsPackage;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.rnfs.RNFSPackage;
