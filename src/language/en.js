@@ -44,4 +44,6 @@ export default {
   messageDescText: 'Message description',
   startTracking: 'Start Tracking',
   finishTracking: 'Finish Tracking',
-}
+  datePickerScreen: 'Date Picker Screen',
+  openDatePickerText: 'Open date picker',
+};

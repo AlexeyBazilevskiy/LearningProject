@@ -44,4 +44,6 @@ export default {
   messageDescText: 'Описание сообщения',
   startTracking: 'Начать отслеживание',
   finishTracking: 'Закончить отслеживание',
-}
+  datePickerScreen: 'Страница выбора даты',
+  openDatePickerText: 'Выбрать дату',
+};

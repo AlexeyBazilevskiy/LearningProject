@@ -19,6 +19,7 @@ import FingerPrintScannerPage from './src/pages/FingerPrintScannerPage/FingerPri
 import MusicPlayerPage from './src/pages/MusicPlayerPage/MusicPlayerPage';
 import QrCodeScannerPage from './src/pages/QrCodeScanerPage/QrCodeScannerPage';
 import FlashMessagePage from './src/pages/FlashMessagePage/FlashMessagePage';
+import DatePickerPage from './src/pages/DatePickerPage/DatePickerPAge';
 
 const persistConfig = {
   key: 'root',
@@ -39,6 +40,10 @@ const App = () => {
         <NavigationContainer>
           <Drawer.Navigator
             drawerContent={props => <CustomDrawerContent {...props} />}>
+            <Drawer.Screen
+              name={I18nJs.t('datePickerScreen')}
+              component={DatePickerPage}
+            />
             <Drawer.Screen
               name={I18nJs.t('flashMessage')}
               component={FlashMessagePage}
