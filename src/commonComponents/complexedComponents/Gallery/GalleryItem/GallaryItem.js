@@ -1,8 +1,8 @@
-import React from 'react'
-import StyledImage from "../../../lowLevelComponents/styledImage";
+import React from 'react';
+import StyledImage from '../../../lowLevelComponents/styledImage';
 
 const GalleryItem = ({item}) => {
-  return(
+  return (
     <StyledImage
       source={{uri: item}}
       key={item}
@@ -11,7 +11,7 @@ const GalleryItem = ({item}) => {
       marginRight={'5px'}
       marginTop={'5px'}
     />
-  )
-}
+  );
+};
 
-export default GalleryItem
+export default GalleryItem;

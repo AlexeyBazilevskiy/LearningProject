@@ -1,8 +1,8 @@
-import React from 'react'
-import {WebView} from 'react-native-webview'
-import InfoMessage from "../../commonComponents/complexedComponents/InfoMessage/InfoMessage";
-import StyledView from "../../commonComponents/lowLevelComponents/styledView";
-import I18nJs from "react-native-i18n";
+import React from 'react';
+import {WebView} from 'react-native-webview';
+import InfoMessage from '../../commonComponents/complexedComponents/InfoMessage/InfoMessage';
+import StyledView from '../../commonComponents/lowLevelComponents/styledView';
+import I18nJs from 'react-native-i18n';
 
 const WebViewPage = ({route: {params}}) => {
   const webViewText = `
@@ -28,25 +28,42 @@ const WebViewPage = ({route: {params}}) => {
     }, 50)
   `;
   const renderInfoMess = (text, textColor, bodyStyle) => {
-    return(
+    return (
       <InfoMessage
         text={text}
         textColor={textColor}
-        bodyStyles={{position: 'absolute', alignSelf: 'center', borderRadius: 20, zIndex: 2, ...bodyStyle}} />
-    )
-  }
+        bodyStyles={{
+          position: 'absolute',
+          alignSelf: 'center',
+          borderRadius: 20,
+          zIndex: 2,
+          ...bodyStyle,
+        }}
+      />
+    );
+  };
 
-  return(
+  return (
     <StyledView flex={1}>
       <WebView
-        source={{ uri: params ? params.url : 'https://google.com' }}
-        renderError={(err) => renderInfoMess( `${I18nJs.t('failLoad')} ${err}`, '#fff', {width: '100%', backgroundColor: '#fe2356'})}
-        renderLoading={() => renderInfoMess(I18nJs.t('loading'), '#000', {padding: 20, backgroundColor: 'lightblue'})}
+        source={{uri: params ? params.url : 'https://google.com'}}
+        renderError={err =>
+          renderInfoMess(`${I18nJs.t('failLoad')} ${err}`, '#fff', {
+            width: '100%',
+            backgroundColor: '#fe2356',
+          })
+        }
+        renderLoading={() =>
+          renderInfoMess(I18nJs.t('loading'), '#000', {
+            padding: 20,
+            backgroundColor: 'lightblue',
+          })
+        }
         injectedJavaScript={webViewText}
         onMessage={() => {}}
       />
     </StyledView>
-  )
-}
+  );
+};
 
-export default WebViewPage
+export default WebViewPage;

@@ -1,17 +1,16 @@
-import React from 'react'
-import StyledFlatList from "../../lowLevelComponents/styledFlatList";
-import GalleryItem from "./GalleryItem/GallaryItem";
-import StyledView from "../../lowLevelComponents/styledView";
-import {useSelector} from "react-redux";
+import React from 'react';
+import StyledFlatList from '../../lowLevelComponents/styledFlatList';
+import GalleryItem from './GalleryItem/GallaryItem';
+import StyledView from '../../lowLevelComponents/styledView';
+import {useSelector} from 'react-redux';
 
 const Gallery = ({contentContainerStyle, styles, isHorizontal}) => {
-  const {photoStore: {data}} = useSelector(store => store)
+  const {
+    photoStore: {data},
+  } = useSelector(store => store);
 
-  return(
-    <StyledView
-      flex={1}
-      style={styles}
-    >
+  return (
+    <StyledView flex={1} style={styles}>
       <StyledFlatList
         data={data}
         flex={1}
@@ -19,8 +18,8 @@ const Gallery = ({contentContainerStyle, styles, isHorizontal}) => {
         contentContainerStyle={contentContainerStyle}
         renderItem={GalleryItem}
       />
-     </StyledView>
-  )
-}
+    </StyledView>
+  );
+};
 
-export default Gallery
+export default Gallery;
